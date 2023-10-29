@@ -8,6 +8,10 @@ def greeting_card():
         (x, y) = (int(c) for c in input().split())
         s.add((x, y))
     total = 0
+    # https://chat.openai.com/share/8b61b941-bd4d-4c2e-bac5-5df546c4e724
+    # we search endpoint with pythaogra theorem
+    # 1. add / minus 2018
+    # 2. diagonal using pythagoras theorem -> 2018 ^ 2 = 1118 ^ 2 + 1680 ^ 2
     for (x, y) in list(s):
         points = [
             (x + 2018, y),

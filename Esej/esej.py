@@ -13,19 +13,13 @@ def generate_essay(A, B):
     # Generate the unique words first
     while len(used_words) < unique_words_required:
         max_word_len = random.randint(1, 15)
-        word = generate_random_word(random.randint(1, 15))
-        if word not in used_words:
-            used_words.add(word)
+        word = generate_random_word(max_word_len)
+        used_words.add(word)
 
     essay_words = list(used_words)
 
-    while len(essay_words) < words_required:
+    while len(essay_words) < B:
         essay_words.append(random.choice(essay_words))
-
-    while len(essay_words) < A:
-        max_word_len = random.randint(1, 15)
-        word = generate_random_word(max_word_len)
-        essay_words.append(word)
 
     return " ".join(essay_words)
 
